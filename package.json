@@ -1,0 +1,49 @@
+{
+  "name": "mariadbgraphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "fix-lint-staged": "lint-staged",
+    "prepare": "husky install",
+    "check-engines": "check-engine",
+    "build": "webpack --config src/webpack.config.js --mode production",
+    "dev": "NODE_ENV=development npm run server",
+    "server": "NODE_LOGGING=debug nodemon --inspect --exec babel-node  src/index.js",
+    "lint": "eslint --ext .js --ext .json src",
+    "fix-lint": "eslint --fix  --ext .js --ext .json src",
+    "jsinspect": "jsinspect src",
+    "test": "nyc mocha \"./src/**/*.test.js\" --exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-modules/core": "^0.7.17",
+    "apollo-server-express": "^3.6.3",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.2",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-import-helpers": "^1.2.1",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jsinspect": "^0.12.7",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
