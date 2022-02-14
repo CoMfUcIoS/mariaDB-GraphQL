@@ -16,6 +16,7 @@ services:
       MARIADB_USER: "${DB_USERNAME}"
       MARIADB_PASSWORD: "${DB_PASSWORD}"
     container_name: db
+    command: --log-bin --binlog-format=MIXED
 
   phpmyadmin:
     container_name: phpmyadmin

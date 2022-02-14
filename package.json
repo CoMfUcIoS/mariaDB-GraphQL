@@ -18,13 +18,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@graphql-modules/core": "^0.7.17",
+    "@graphql-tools/schema": "^8.3.1",
+    "apollo-server": "^3.6.3",
     "apollo-server-express": "^3.6.3",
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
     "express": "^4.17.2",
+    "graphql": "^15.8.0",
+    "graphql-subscriptions": "^2.0.0",
+    "lodash": "^4.17.21",
+    "mysql-live-select": "^1.0.6",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.16.1"
+    "sequelize": "^6.16.1",
+    "subscriptions-transport-ws": "^0.11.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.0",
